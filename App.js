@@ -30,6 +30,12 @@ export default function App() {
   const ImgInferno = {
     uri: "https://media.istockphoto.com/id/1169495140/pt/foto/the-surface-of-the-lava-background.jpg?s=612x612&w=0&k=20&c=pyrb8l3eHoYJ5xhLILG93k5X8c1JqLpfdeyJAFpaiT8=",
   };
+  const ImgMundoCongelado = {
+    uri: "https://istoedinheiro.com.br/wp-content/uploads/sites/17/2021/03/terra-e1615599020164.jpg",
+  };
+  const ImgYakutski = {
+    uri: "https://cloudfront-us-east-2.images.arcpublishing.com/reuters/TMTQ7FYM6RIMRHB7TEIXYVJKJU.jpg",
+  };
 
   // aqui é a função onde vai ser feita a verificação se há algum número no Input
   const verificadorGrau = () => {
@@ -52,9 +58,12 @@ export default function App() {
   };
 
   const Img = () => {
-    if (celsius <= -15) {
-      setImagem(ImgCongelado);
-      setMensagem("Tá friozinho de congelar em!");
+    if (celsius <= -276) {
+      setImagem(ImgMundoCongelado);
+      setMensagem("O Mundo congelou");
+    } else if (celsius >= -275 && celsius <= -15) {
+      setImagem(ImgYakutski);
+      setMensagem("Bem vindo a Yakutsk, a cidade mais gelada da Terra");
     } else if (celsius >= -16 && celsius <= 5) {
       setImagem(ImgFrio);
       setMensagem("Friozinho da Europa em pae, tempinho de ir patinar no gelo");
