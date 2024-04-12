@@ -57,6 +57,7 @@ export default function App() {
     setVisible(false);
   };
 
+  // aqui chamando as imagens e mensagens dependendo do valor de Celsius
   const Img = () => {
     if (celsius <= -276) {
       setImagem(ImgMundoCongelado);
