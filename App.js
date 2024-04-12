@@ -62,10 +62,13 @@ export default function App() {
     if (celsius <= -276) {
       setImagem(ImgMundoCongelado);
       setMensagem("O Mundo congelou");
-    } else if (celsius >= -275 && celsius <= -15) {
+    } else if (celsius >= -275 && celsius <= -30) {
       setImagem(ImgYakutski);
       setMensagem("Bem vindo a Yakutsk, a cidade mais gelada da Terra");
-    } else if (celsius >= -16 && celsius <= 5) {
+    } else if (celsius >= -29 && celsius <= -11) {
+      setImagem(ImgCongelado);
+      setMensagem("Frio demais, sem condições");
+    } else if (celsius >= -10 && celsius <= 5) {
       setImagem(ImgFrio);
       setMensagem("Friozinho da Europa em pae, tempinho de ir patinar no gelo");
     } else if (celsius >= 6 && celsius <= 20) {
